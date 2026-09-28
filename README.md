@@ -15,7 +15,7 @@ Para treinar algoritmos de inteligência artificial com sinais contínuos de vib
 - **Por que isso é um problema?** Como esses  trechos são quase idênticos, o modelo não aprende de fato a diagnosticar uma falha nova; ele apenas **memoriza o formato daquele arquivo específico**.
 - **A consequência prática:** Quando o modelo é testado em dados de uma máquina real ou sob novas condições de operação, seu desempenho despenca drasticamente.
 
-## 3. A solução proposta pelos Autores 
+## 3. A solução Proposta pelos Autores 
 
 Para eliminar esse viés e obter resultados confiáveis, o artigo propõe um novo framework metodológico:
 
@@ -23,7 +23,7 @@ Para eliminar esse viés e obter resultados confiáveis, o artigo propõe um nov
 2. **Divisão Rígida por Condição Operacional:** Os dados são separados por cenários reais (como diferentes cargas no motor ou severidade de falha), garantindo que treino e teste nunca compartilhem pedaços do mesmo sinal.
 3. **Testes Estatísticos Rigorosos:** Aplicação de testes (como Nadeau-Bengio) para provar se a diferença de desempenho entre os modelos analisados (KNN, SVM, Random Forest, Redes Neurais) é estatisticamente real e não apenas fruto do acaso.
 
-## 4. O impacto Prático (Estudo de Caso CWRU)
+## 4. O Impacto Prático (Estudo de Caso CWRU)
 
 Os autores testaram diferentes classificadores no conhecido banco de dados de rolamentos da *Case Western Reserve University (CWRU)* sob dificuldades crescentes:
 
@@ -37,7 +37,7 @@ Os autores testaram diferentes classificadores no conhecido banco de dados de ro
 
 ## 5. Glossário Didático 
 
-- **Viés de Similaridade(*Similarity Bias*):** Otimismo artificial gerado quando trechos quase idênticos de um mesmo sinal de dados aparecem tanto no treino quanto no teste.
+- **Viés de Similaridade (*Similarity Bias*):** Otimismo artificial gerado quando trechos quase idênticos de um mesmo sinal de dados aparecem tanto no treino quanto no teste.
 - **Validação Cruzada Aninhada:** Método de teste dividido em duas camadas (interna e externa) para impedir que os dados de teste influenciem o treinamento do modelo.
 - **Hiperparâmetros:** Ajustes prévios de configuração de um algoritmo de IA (ex: número de árvores em uma *Random Forest*) definidos antes do aprendizado real começar.
 - **Overfitting de Hiperparâmetros:** O erro de ajustar repetidamente o modelo olhando  para o resultado do teste até ele parecer bom "por sorte" naquele cenário específico.
